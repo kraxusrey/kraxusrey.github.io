@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta</title>
+    <style>
+        #no {
+            position: absolute;
+        }
+    </style>
+    <script>
+        function moveButton() {
+            const noButton = document.getElementById('no');
+            noButton.style.top = Math.random() * window.innerHeight + 'px';
+            noButton.style.left = Math.random() * window.innerWidth + 'px';
+        }
+
+        function showMessage() {
+            document.getElementById('message').innerText = "Aww también te quiero mucho :) Angie";
+        }
+    </script>
+</head>
+<body>
+    <h1>¿Me quieres?</h1>
+    <button id="si" onclick="showMessage()">Sí</button>
+    <button id="no" onmouseover="moveButton()">No</button>
+    <p id="message"></p>
+</body>
+</html>
